@@ -7,6 +7,8 @@ const createTable = async () => {
         table.string('texto', 255);
         table.timestamp('hora').defaultTo(knexSqLite3.fn.now());
     })
+    .then(()=> console.log('table created'))
+    .catch((err)=> console.log(err))
 }
 
 createTable();
